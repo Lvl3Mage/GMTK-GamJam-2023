@@ -13,11 +13,11 @@ TagManager:
   - Water
   - UI
   - Current
-  - FrozenCurrent
-  - 
-  - 
-  - 
-  - 
+  - Terrain
+  - ShipTarget
+  - Ship
+  - Monster
+  - Tentacle
   - 
   - 
   - 

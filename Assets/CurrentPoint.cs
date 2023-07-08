@@ -131,7 +131,9 @@ public class CurrentPoint : MonoBehaviour
 			velocity += Vector2.Reflect(addedValue, surfaceDir);
 			return;
 		}
+
 		velocity += addedValue;
+		velocity = Vector2.ClampMagnitude(velocity, 100f);
 	}
 	CurrentPoint GetPointInDir(Vector2 dir){
 		return controller.GetClosestPoint((Vector2)transform.position + dir.normalized*controller.spread*2);

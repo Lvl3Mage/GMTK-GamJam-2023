@@ -130,7 +130,7 @@ MonoBehaviour:
   indicator: {fileID: 6342071873194784185}
   indicatorSize: 0.6
   indicatorAspect: 0.2
-  velocityBleedoverSpeed: 1
+  velocityBleedoverSpeed: 0.6
   velocityDecaySpeed: 0
   velocitySpread: 0.25
   noiseTimeScale: 0.1
