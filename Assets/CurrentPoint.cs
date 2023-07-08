@@ -8,8 +8,8 @@ public class CurrentPoint : MonoBehaviour
 
 	[Header("Indicator settings")]
 	[SerializeField] Transform indicator;
-	[SerializeField] float indicatorSize;
-	[SerializeField] float indicatorAspect;
+	[SerializeField] float indicatorSize, maxIndicatorSize;
+	// [SerializeField] float indicatorAspect;
 
 	[Header("Current mechanics")]
 	[SerializeField] float velocityBleedoverSpeed;
@@ -85,7 +85,7 @@ public class CurrentPoint : MonoBehaviour
 		VelocityNoise();
 
 		indicator.rotation = Quaternion.Euler(0,0,Mathf.Atan2(velocity.y,velocity.x)*Mathf.Rad2Deg - 90f);
-		indicator.localScale = new Vector3(velocity.magnitude*indicatorSize*indicatorAspect, velocity.magnitude*indicatorSize, indicator.localScale.z);
+		indicator.localScale = new Vector3(Mathf.Min(velocity.magnitude*indicatorSize, maxIndicatorSize), Mathf.Min(velocity.magnitude*indicatorSize, maxIndicatorSize), indicator.localScale.z);
 	}
 	void VelocityBleed(){
 		if(velocity == Vector2.zero){return;}

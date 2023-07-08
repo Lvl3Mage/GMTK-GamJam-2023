@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1592191408689369536}
   - component: {fileID: 1592191408689369539}
   - component: {fileID: 1592191408689369538}
+  - component: {fileID: 5090383612059899551}
   m_Layer: 11
   m_Name: bone2
   m_TagString: Untagged
@@ -108,6 +109,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inertia: 0.1
+--- !u!114 &5090383612059899551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592191408689369543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ff315a629e7c3429af674ff5643ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592191410001092490
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +134,7 @@ GameObject:
   - component: {fileID: 1592191410001092532}
   - component: {fileID: 1592191410001092534}
   - component: {fileID: 1592191410001092529}
+  - component: {fileID: 2527775524824934943}
   m_Layer: 11
   m_Name: bone1
   m_TagString: Untagged
@@ -217,6 +231,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inertia: 0.1
+--- !u!114 &2527775524824934943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592191410001092490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ff315a629e7c3429af674ff5643ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592191410521119025
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +259,7 @@ GameObject:
   - component: {fileID: 1592191410521119039}
   - component: {fileID: 1592191410521119038}
   - component: {fileID: 1592191410521119033}
-  - component: {fileID: 4364916596826377111}
+  - component: {fileID: 6482537227333232572}
   m_Layer: 11
   m_Name: tentacle
   m_TagString: Untagged
@@ -419,8 +445,8 @@ MonoBehaviour:
   submergedSprite: {fileID: 2833513252131399001, guid: 8d5ebacaa186cbb4f8c884b6c698a8d5, type: 3}
   emergedSprite: {fileID: 21300000, guid: 45e822e4db439964b8433eefa8c6d486, type: 3}
   submergedZPosition: 1
-  emergedZPosition: -1
---- !u!114 &4364916596826377111
+  emergedZPosition: -2
+--- !u!114 &6482537227333232572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -429,8 +455,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1592191410521119025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01ee11edf0e8c7c4f9e71e56d497da4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 91ff315a629e7c3429af674ff5643ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  attackCooldown: 1
