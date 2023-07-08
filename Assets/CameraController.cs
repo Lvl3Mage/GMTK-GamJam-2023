@@ -10,6 +10,8 @@ public class CameraController : MonoBehaviour
 	[SerializeField] float maxSize;
 	[SerializeField] float positionSmoothness;
 	[SerializeField] float zoomSmoothness;
+	[SerializeField] Vector2 clampRange;
+	[SerializeField] float clampSmoothness;
 	void Start()
 	{
 		prevMousePosition = GetMousePos();
@@ -46,8 +48,11 @@ public class CameraController : MonoBehaviour
 		}
 
 
-		//Lerp camera stats
-
+		Vector2 clampedTargetCamPos = targetCamPos;
+		clampedTargetCamPos.x = Mathf.Clamp(clampedTargetCamPos.x, -clampRange.x, clampRange.x);
+		clampedTargetCamPos.y = Mathf.Clamp(clampedTargetCamPos.y, -clampRange.y, clampRange.y);
+		targetCamPos = Vector2.Lerp(targetCamPos, clampedTargetCamPos, 1-Mathf.Pow(clampSmoothness, Time.deltaTime));
+		
 		transform.position = Vector3.Lerp(transform.position, new Vector3(targetCamPos.x, targetCamPos.y, transform.position.z), 1-Mathf.Pow(positionSmoothness, Time.deltaTime));
 		
 

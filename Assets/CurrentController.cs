@@ -39,7 +39,7 @@ public class CurrentController : MonoBehaviour
 		for(int i = 0; i < dimentions.x; i++){
 			for(int j = 0; j < dimentions.y; j++){
 				Vector2 coord = IndexToWorldPos(new Vector2(i,j));
-				CurrentPoint point = Instantiate(pointPrefab, (Vector3)coord, Quaternion.identity, transform);
+				CurrentPoint point = Instantiate(pointPrefab, new Vector3(coord.x,coord.y,transform.position.z), Quaternion.identity, transform);
 				points[i*dimentions.y + j] = point;
 				pointMap[i,j] = point;
 			}

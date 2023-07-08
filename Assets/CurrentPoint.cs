@@ -12,15 +12,17 @@ public class CurrentPoint : MonoBehaviour
 	[SerializeField] float indicatorAspect;
 
 	[Header("Current mechanics")]
-	[SerializeField] float velocityBleedover;
+	[SerializeField] float velocityBleedoverSpeed;
 	[SerializeField] [Range(0,1)] float velocityDecaySpeed;
-	
+	[SerializeField] [Range(0,1)] float velocitySpread;
+
 	[Header("Current Noise settings")]
 	[SerializeField] float noiseTimeScale;
 	[SerializeField] float noiseScale;
 	[SerializeField] float noiseStrength;
 	[SerializeField] float noiseAcceleration;
 	[SerializeField] Vector2 noiseXOffset, noiseYOffset;
+	[SerializeField] Vector2 noiseAverage;
 	public Vector2 velocity {get; private set;}
 	CurrentController controller;
 	Vector2 noiseXPos, noiseYPos;
@@ -95,16 +97,16 @@ public class CurrentPoint : MonoBehaviour
 		CurrentPoint nextLeft = GetPointInDir(normVel + new Vector2(-normVel.y, normVel.x));
 
 		if(frozen){
-			nextPoint.AddVelocity(velocity*0.33f);
-			nextRight.AddVelocity(velocity*0.33f);
-			nextLeft.AddVelocity(velocity*0.33f);
+			nextPoint.AddVelocity(velocity*Mathf.Lerp(1f, 0.33f, velocitySpread));
+			nextRight.AddVelocity(velocity*Mathf.Lerp(0, 0.33f, velocitySpread));
+			nextLeft.AddVelocity(velocity*Mathf.Lerp(0, 0.33f, velocitySpread));
 			velocity = Vector2.zero;
 			return;
 		}
-		float bleedover = (velocity.magnitude/controller.spread) * velocityBleedover * Time.deltaTime;
-		nextPoint.AddVelocity(velocity*bleedover*0.33f);
-		nextRight.AddVelocity(velocity*bleedover*0.33f);
-		nextLeft.AddVelocity(velocity*bleedover*0.33f);
+		float bleedover = velocity.magnitude * velocityBleedoverSpeed * Time.deltaTime;
+		nextPoint.AddVelocity(velocity*bleedover*Mathf.Lerp(1f, 0.33f, velocitySpread));
+		nextRight.AddVelocity(velocity*bleedover*Mathf.Lerp(0, 0.33f, velocitySpread));
+		nextLeft.AddVelocity(velocity*bleedover*Mathf.Lerp(0, 0.33f, velocitySpread));
 		if(!frozen){
 			AddVelocity(-velocity*bleedover);
 		}
@@ -117,7 +119,7 @@ public class CurrentPoint : MonoBehaviour
 		if(frozen){return;}
 		float x = (Perlin3D(noiseXPos.x, noiseXPos.y, Time.time*noiseTimeScale)-0.5f)*2;
 		float y = (Perlin3D(noiseYPos.x, noiseYPos.y, Time.time*noiseTimeScale)-0.5f)*2;
-		Vector2 noiseTarget = new Vector2(x, y);
+		Vector2 noiseTarget = new Vector2(x, y) + noiseAverage;
 		Vector2 noiseAccel = (noiseTarget*noiseStrength - velocity)*noiseAcceleration*Time.deltaTime; 
 		velocity += noiseAccel;
 
@@ -129,7 +131,9 @@ public class CurrentPoint : MonoBehaviour
 			velocity += Vector2.Reflect(addedValue, surfaceDir);
 			return;
 		}
+
 		velocity += addedValue;
+		velocity = Vector2.ClampMagnitude(velocity, 100f);
 	}
 	CurrentPoint GetPointInDir(Vector2 dir){
 		return controller.GetClosestPoint((Vector2)transform.position + dir.normalized*controller.spread*2);

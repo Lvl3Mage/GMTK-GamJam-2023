@@ -130,14 +130,16 @@ MonoBehaviour:
   indicator: {fileID: 6342071873194784185}
   indicatorSize: 0.6
   indicatorAspect: 0.2
-  velocityBleedover: 1
+  velocityBleedoverSpeed: 0.6
   velocityDecaySpeed: 0
+  velocitySpread: 0.25
   noiseTimeScale: 0.1
   noiseScale: 0.2
   noiseStrength: 1.5
-  noiseAcceleration: 0.05
+  noiseAcceleration: 0.02
   noiseXOffset: {x: 100, y: 25}
   noiseYOffset: {x: -69, y: 420}
+  noiseAverage: {x: 0.1, y: 0.1}
 --- !u!58 &7573693273739686710
 CircleCollider2D:
   m_ObjectHideFlags: 0
