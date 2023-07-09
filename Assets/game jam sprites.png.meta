@@ -65,6 +65,45 @@ TextureImporter:
   - first:
       213: -9138021673096380385
     second: game jam sprites_20
+  - first:
+      213: 374225078348839871
+    second: game jam sprites_21
+  - first:
+      213: -3608121478862620665
+    second: game jam sprites_22
+  - first:
+      213: 6936796114245482527
+    second: game jam sprites_23
+  - first:
+      213: -8197209953295387579
+    second: game jam sprites_24
+  - first:
+      213: 8952527291248352667
+    second: game jam sprites_25
+  - first:
+      213: -2235296877375089497
+    second: game jam sprites_26
+  - first:
+      213: -8542684429601340707
+    second: game jam sprites_27
+  - first:
+      213: -4167714110592779391
+    second: game jam sprites_28
+  - first:
+      213: -414841998870014370
+    second: game jam sprites_29
+  - first:
+      213: 8893394509674987104
+    second: game jam sprites_30
+  - first:
+      213: 3251519550952242793
+    second: game jam sprites_31
+  - first:
+      213: -5927465236003120410
+    second: game jam sprites_32
+  - first:
+      213: -4917489794310015329
+    second: game jam sprites_33
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -590,6 +629,279 @@ TextureImporter:
       bones: []
       spriteID: f10054124b93f2180800000000000000
       internalID: -9138021673096380385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_21
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 424
+        width: 262
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb760dd9b3813500800000000000000
+      internalID: 374225078348839871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_22
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 657
+        width: 56
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708bfe1b1a06dedc0800000000000000
+      internalID: -3608121478862620665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_23
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 655
+        width: 74
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1879ec2053744060800000000000000
+      internalID: 6936796114245482527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_24
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 651
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54438886af8ad3e80800000000000000
+      internalID: -8197209953295387579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_25
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 649
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d19dc8324cd3c70800000000000000
+      internalID: 8952527291248352667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_26
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 790
+        width: 83
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a494884551aaf0e0800000000000000
+      internalID: -2235296877375089497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_27
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 788
+        width: 67
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd20a59b5c9427980800000000000000
+      internalID: -8542684429601340707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_28
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 785
+        width: 80
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bfbb0191e4926c0800000000000000
+      internalID: -4167714110592779391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_29
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 128
+        width: 122
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e569073666f2e3af0800000000000000
+      internalID: -414841998870014370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_30
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 143
+        width: 86
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e3694ff2fab6b70800000000000000
+      internalID: 8893394509674987104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_31
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 162
+        width: 49
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96efeb6edc7bf1d20800000000000000
+      internalID: 3251519550952242793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_32
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 96
+        width: 155
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea9e8dd5c96dbda0800000000000000
+      internalID: -5927465236003120410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game jam sprites_33
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 402
+        width: 222
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96fa87061191cbb0800000000000000
+      internalID: -4917489794310015329
       vertices: []
       indices: 
       edges: []
