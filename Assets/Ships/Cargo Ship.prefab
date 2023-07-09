@@ -90,7 +90,7 @@ MonoBehaviour:
   forwardAcceleration: 0.99
   sideDrag: 0.1
   rotationSmoothness: 0.6
-  sinkCargoAmount: -5
+  sinkCargoAmount: -2
   arriveCargoAmount: 10
 --- !u!95 &6164305647120517112
 Animator:

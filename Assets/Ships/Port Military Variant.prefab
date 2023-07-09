@@ -130,7 +130,7 @@ MonoBehaviour:
   - {fileID: 6802079350178529283, guid: 99ea54b9f833fd6419bed4394b5261e2, type: 3}
   initialShipRate: 0
   rateGrowth: 0.5
-  maxShipRate: 2
+  maxShipRate: 3
   maxInitialPhase: 0
   initialPhasePower: 1
 --- !u!1 &7543134845171224257

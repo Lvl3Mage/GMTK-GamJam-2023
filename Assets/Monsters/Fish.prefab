@@ -268,7 +268,7 @@ MonoBehaviour:
   animator: {fileID: 4252782663642869699}
   deathEffect: {fileID: 589069581390908076, guid: a3550258d5f03134ca5f3ee1e4aaf374, type: 3}
   fin: {fileID: 4252782662039116183}
-  rotationSpeed: 15
+  rotationSpeed: 8
 --- !u!50 &4252782663642869698
 Rigidbody2D:
   serializedVersion: 4
