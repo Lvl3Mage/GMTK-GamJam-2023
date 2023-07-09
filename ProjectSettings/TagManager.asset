@@ -6,6 +6,10 @@ TagManager:
   tags:
   - CurrentController
   - GameManager
+  - LevelManager
+  - Timer
+  - Cargo
+  - Power
   layers:
   - Default
   - TransparentFX

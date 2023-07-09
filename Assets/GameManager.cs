@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance {get; private set;}
 	[SerializeField] float maxCargo;
+	SliderController cargoSlider;
 	float currentCargo = 0;
 	void Awake()
 	{
@@ -16,15 +17,28 @@ public class GameManager : MonoBehaviour
 		}
 		instance = this;
 	}
+	void Start(){
+		cargoSlider = GameObject.FindGameObjectWithTag("Cargo").GetComponent<SliderController>();
+		cargoSlider.SetRange(0,maxCargo);
+	}
 	public void ChangeCargo(float change){
-
-		if(currentCargo >= maxCargo){return;}
+		if(gameOver){return;}
 
 		currentCargo += change;
 		currentCargo = Mathf.Clamp(currentCargo, 0, maxCargo);
+		cargoSlider.SetValue(maxCargo-currentCargo);
 		if(currentCargo >= maxCargo){
-			// gameOver
+			gameOver = true;
+			ShowGameOver();
 		}
+	}
+	public bool gamePaused {get; private set;}
+	public bool gameOver {get; private set;}
+	public void TogglePause(bool value){
+		gamePaused = value;
+	}
+	void ShowGameOver(){
+
 	}
 
 	void Update()

@@ -24,6 +24,7 @@ public class CameraController : MonoBehaviour
 	float targetCamZoom;
 	void FixedUpdate()
 	{
+		if(GameManager.instance.gamePaused) return;
 		Vector2 Axis = Vector2.zero;
 		Axis.x = Input.GetAxis("Horizontal");
 		Axis.y = Input.GetAxis("Vertical");
@@ -52,7 +53,7 @@ public class CameraController : MonoBehaviour
 		clampedTargetCamPos.x = Mathf.Clamp(clampedTargetCamPos.x, -clampRange.x, clampRange.x);
 		clampedTargetCamPos.y = Mathf.Clamp(clampedTargetCamPos.y, -clampRange.y, clampRange.y);
 		targetCamPos = Vector2.Lerp(targetCamPos, clampedTargetCamPos, 1-Mathf.Pow(clampSmoothness, Time.deltaTime));
-		
+
 		transform.position = Vector3.Lerp(transform.position, new Vector3(targetCamPos.x, targetCamPos.y, transform.position.z), 1-Mathf.Pow(positionSmoothness, Time.deltaTime));
 		
 

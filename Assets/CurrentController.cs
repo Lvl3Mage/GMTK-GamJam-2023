@@ -15,7 +15,10 @@ public class CurrentController : MonoBehaviour
 	[SerializeField] float maxDist;
 	[SerializeField] float velocityScale;
 
-
+	SliderController powerSlider;
+	[SerializeField] float maxPower;
+	[SerializeField] float powerRegainSpeed;
+	float power;
 	public static CurrentController instance {get; private set;}
 	void Awake(){
 		if(instance!=null){
@@ -32,6 +35,8 @@ public class CurrentController : MonoBehaviour
 	{
 		InitializePoints();
 		prevMousePosition = GetMousePos();
+		powerSlider = GameObject.FindGameObjectWithTag("Power").GetComponent<SliderController>();
+		powerSlider.SetRange(0,maxPower);
 	}
 	void InitializePoints(){
 		points = new CurrentPoint[dimentions.x * dimentions.y];
@@ -48,24 +53,39 @@ public class CurrentController : MonoBehaviour
 
 	void Update()
 	{
-		Vector2 mousePosition = GetMousePos();
+
+		if(GameManager.instance.gamePaused) return;
+
+
 		if(Input.GetMouseButton(0)){
-			if(Time.deltaTime > 0.1f){return;}
-			Vector2 mouseVelocity = (mousePosition - prevMousePosition)*Time.deltaTime;
+			ApplyMouseDrag();
+		}
+		else{
+			//recharge power
+			power += powerRegainSpeed*Time.deltaTime;
+			power = Mathf.Clamp(power,0,maxPower);
+		}
+		powerSlider.SetValue(power);
+		prevMousePosition = GetMousePos();
+
+	}
+	void ApplyMouseDrag(){
+		if(Time.deltaTime > 0.1f){return;}
+		if(power <= 0){return;}
+		Vector2 mousePosition = GetMousePos();
+		Vector2 mouseVelocity = (mousePosition - prevMousePosition)*Time.deltaTime;
 
 
-			CurrentPoint[] overlapPoints = GetPointsInCircle(mousePosition, maxDist);
+		CurrentPoint[] overlapPoints = GetPointsInCircle(mousePosition, maxDist);
 
-			foreach(CurrentPoint point in overlapPoints){
-				float dist = Vector2.Distance(mousePosition, point.transform.position);
-				float strength = 1-dist/maxDist;
-				point.AddVelocity(mouseVelocity*strength * velocityScale);
-			}
-
+		foreach(CurrentPoint point in overlapPoints){
+			float dist = Vector2.Distance(mousePosition, point.transform.position);
+			float strength = 1-dist/maxDist;
+			point.AddVelocity(mouseVelocity*strength * velocityScale);
 		}
 
-		prevMousePosition = mousePosition;
-
+		power -= mouseVelocity.magnitude;
+		power = Mathf.Clamp(power,0,maxPower);
 	}
 	CurrentPoint[] GetPointsInCircle(Vector2 circlePos, float radius){
 		Collider2D[] cols = Physics2D.OverlapCircleAll(circlePos, radius, 1 << 6 /* Current layer index */);
