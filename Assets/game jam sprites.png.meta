@@ -67,7 +67,7 @@ TextureImporter:
     second: game jam sprites_20
   - first:
       213: 374225078348839871
-    second: game jam sprites_21
+    second: piereBase
   - first:
       213: -3608121478862620665
     second: game jam sprites_22
@@ -82,13 +82,13 @@ TextureImporter:
     second: game jam sprites_25
   - first:
       213: -2235296877375089497
-    second: game jam sprites_26
+    second: piere1
   - first:
       213: -8542684429601340707
-    second: game jam sprites_27
+    second: piere2
   - first:
       213: -4167714110592779391
-    second: game jam sprites_28
+    second: piere3
   - first:
       213: -414841998870014370
     second: game jam sprites_29
@@ -634,7 +634,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: game jam sprites_21
+      name: piereBase
       rect:
         serializedVersion: 2
         x: 646
@@ -739,7 +739,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: game jam sprites_26
+      name: piere1
       rect:
         serializedVersion: 2
         x: 830
@@ -760,7 +760,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: game jam sprites_27
+      name: piere2
       rect:
         serializedVersion: 2
         x: 960
@@ -781,11 +781,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: game jam sprites_28
+      name: piere3
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 785
+        x: 1070
+        y: 786
         width: 80
         height: 345
       alignment: 0
@@ -894,7 +894,7 @@ TextureImporter:
         width: 222
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
