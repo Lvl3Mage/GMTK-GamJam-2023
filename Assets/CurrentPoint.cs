@@ -8,7 +8,8 @@ public class CurrentPoint : MonoBehaviour
 
 	[Header("Indicator settings")]
 	[SerializeField] Transform indicator;
-	[SerializeField] float indicatorSize, maxIndicatorSize;
+	[SerializeField] ParticleSystem particles;
+	[SerializeField] float indicatorGrowth = 0.6f, maxIndicatorSize, particleGrowth = 0.6f;
 	// [SerializeField] float indicatorAspect;
 
 	[Header("Current mechanics")]
@@ -85,7 +86,9 @@ public class CurrentPoint : MonoBehaviour
 		VelocityNoise();
 
 		indicator.rotation = Quaternion.Euler(0,0,Mathf.Atan2(velocity.y,velocity.x)*Mathf.Rad2Deg - 90f);
-		indicator.localScale = new Vector3(Mathf.Min(velocity.magnitude*indicatorSize, maxIndicatorSize), Mathf.Min(velocity.magnitude*indicatorSize, maxIndicatorSize), indicator.localScale.z);
+		indicator.localScale = new Vector3(Mathf.Min(velocity.magnitude*indicatorGrowth, maxIndicatorSize), Mathf.Min(velocity.magnitude*indicatorGrowth, maxIndicatorSize), indicator.localScale.z);
+		var module = particles.main;
+		module.startSize = new ParticleSystem.MinMaxCurve(0.1f*Mathf.Max(velocity.magnitude*particleGrowth,1), 0.3f*Mathf.Max(velocity.magnitude*particleGrowth,1));
 	}
 	void VelocityBleed(){
 		if(velocity == Vector2.zero){return;}

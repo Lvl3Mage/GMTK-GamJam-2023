@@ -446,6 +446,8 @@ MonoBehaviour:
   emergedSprite: {fileID: 21300000, guid: 45e822e4db439964b8433eefa8c6d486, type: 3}
   submergedZPosition: 1
   emergedZPosition: -2
+  acceleration: 10
+  tentacleEnd: {fileID: 1592191408689369537}
 --- !u!114 &6482537227333232572
 MonoBehaviour:
   m_ObjectHideFlags: 0

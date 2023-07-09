@@ -82,11 +82,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   DestroyedShipPrefab: {fileID: 2232539828333226152, guid: 53642590f8c79204cb454f29d7477832, type: 3}
+  ArrivedShipPrefab: {fileID: 3664057505132129916, guid: 55570dfabc07bb741bf7a06da2810aea, type: 3}
   targetSpeed: 1
-  slowdownDistance: 2
+  slowdownDistance: 1
   forwardAcceleration: 0.99
   sideDrag: 0.1
   rotationSmoothness: 0.6
+  sinkCargoAmount: 10
+  arriveCargoAmount: -5
 --- !u!1 &152046227333141304
 GameObject:
   m_ObjectHideFlags: 0

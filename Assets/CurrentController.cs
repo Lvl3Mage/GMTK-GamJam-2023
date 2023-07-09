@@ -16,7 +16,7 @@ public class CurrentController : MonoBehaviour
 	[SerializeField] float velocityScale;
 
 
-	public static CurrentController instance;
+	public static CurrentController instance {get; private set;}
 	void Awake(){
 		if(instance!=null){
 			Debug.LogError("Another instance of CurrentController is defined");

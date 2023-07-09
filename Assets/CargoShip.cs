@@ -26,11 +26,19 @@ public abstract class Ship : MonoBehaviour{
 public class CargoShip : Ship
 {
 	Rigidbody2D rigidbody;
+
+	[SerializeField] GameObject ArrivedShipPrefab;
+	[Header("Movement settings")]
 	[SerializeField] float targetSpeed;
 	[SerializeField] float slowdownDistance;
  	[SerializeField] [Range(0,1)] float forwardAcceleration, sideDrag;
 	Transform target;
 	[SerializeField] float rotationSmoothness;
+	[Header("Point settings")]
+	[SerializeField] float sinkCargoAmount;
+	[SerializeField] float arriveCargoAmount;
+
+	bool arrived = false;
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody2D>();
@@ -38,11 +46,22 @@ public class CargoShip : Ship
 	public override void SetTarget(Transform newTarget){
 		target = newTarget;
 	}
-
+	public override void OnDestroy(){
+		if(arrived){return;}//Should not be necessary but prevents last second destruction
+		GameManager.instance.ChangeCargo(-sinkCargoAmount);
+	}
 
 	void Update()
 	{
+		if(arrived){return;}
 		Vector2 targetDelta = target.position - transform.position;
+		if(targetDelta.magnitude < 1f){
+			GameManager.instance.ChangeCargo(arriveCargoAmount);
+			Instantiate(ArrivedShipPrefab, transform.position, transform.rotation);
+			Destroy(gameObject);
+			return;
+		}
+
 
 		float forwardComponent = Vector2.Dot(rigidbody.velocity, transform.up);
 		float tangentComponent = Vector2.Dot(rigidbody.velocity, transform.right);

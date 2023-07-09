@@ -32,7 +32,9 @@ public class Monster : MonoBehaviour
 		if(!emerged){
 			ToggleEmerged(true);
 		}
-
+		foreach(Tentacle tentacle in tentacles){
+			tentacle.SetTarget(closestShip.transform);
+		}
 		Vector2 delta = closestShip.gameObject.transform.position - transform.position;
 
 		// if(delta.magnitude < attackRange || !attackOnCooldown){
