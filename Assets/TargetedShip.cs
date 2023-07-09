@@ -16,7 +16,7 @@ public class TargetedShip : Ship
 	[Header("Point settings")]
 	[SerializeField] float sinkCargoAmount;
 	[SerializeField] float arriveCargoAmount;
-
+	[SerializeField] Poppup poppupPrefab;
 	bool arrived = false;
 	void Start()
 	{
@@ -25,9 +25,10 @@ public class TargetedShip : Ship
 	public override void SetTarget(Transform newTarget){
 		target = newTarget;
 	}
-	public override void OnDestroy(){
+	public override void Destroyed(){
 		if(arrived){return;}//Should not be necessary but prevents last second destruction
 		GameManager.instance.ChangeCargo(sinkCargoAmount);
+		Instantiate(poppupPrefab, transform.position, Quaternion.identity).SetPoints((int)sinkCargoAmount);
 	}
 
 	void Update()
@@ -37,6 +38,7 @@ public class TargetedShip : Ship
 		if(targetDelta.magnitude < 1f){
 			GameManager.instance.ChangeCargo(arriveCargoAmount);
 			Instantiate(ArrivedShipPrefab, transform.position, transform.rotation);
+			Instantiate(poppupPrefab, transform.position, Quaternion.identity).SetPoints((int)arriveCargoAmount);
 			Destroy(gameObject);
 			return;
 		}

@@ -13,13 +13,13 @@ public abstract class Ship : MonoBehaviour{
 		OnAttack(damage);
 		if(health <= 0){
 			
-			OnDestroy();
+			Destroyed();
 			Instantiate(DestroyedShipPrefab, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 	}
 	public virtual void OnAttack(float damage){}
-	public virtual void OnDestroy(){}
+	public virtual void Destroyed(){}
 
 	public abstract void SetTarget(Transform newTarget);
 }

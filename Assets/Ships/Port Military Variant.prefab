@@ -128,11 +128,11 @@ MonoBehaviour:
   targets: []
   shipPrefabs:
   - {fileID: 6802079350178529283, guid: 99ea54b9f833fd6419bed4394b5261e2, type: 3}
-  initialShipRate: 0
-  rateGrowth: 0.5
-  maxShipRate: 3
-  maxInitialPhase: 0
-  initialPhasePower: 1
+  initialShipRate: 0.05
+  rateGrowth: 0.01
+  maxShipRate: 1
+  maxInitialPhase: 1
+  phaseOffset: -1
 --- !u!1 &7543134845171224257
 GameObject:
   m_ObjectHideFlags: 0

@@ -241,6 +241,7 @@ MonoBehaviour:
   rotationSmoothness: 0.6
   sinkCargoAmount: -1
   arriveCargoAmount: 0
+  poppupPrefab: {fileID: 898276223418166526, guid: 377ef4ff153830a46a00a01ffe235dce, type: 3}
 --- !u!82 &8853717278653588652
 AudioSource:
   m_ObjectHideFlags: 0

@@ -14,12 +14,12 @@ public class ShipSpawner : MonoBehaviour
 	[SerializeField] float maxShipRate;
 
 	[SerializeField][Range(0,1)] float maxInitialPhase;
-	[SerializeField] float initialPhasePower = 1;
+	[SerializeField] float phaseOffset;
 	float shipRate;
 	float accumulatedShips = 0;
 	void Awake()
 	{
-		accumulatedShips = Mathf.Pow(Random.Range(0f,maxInitialPhase),initialPhasePower);
+		accumulatedShips = Random.Range(0f,maxInitialPhase) + phaseOffset;
 	}
 
 

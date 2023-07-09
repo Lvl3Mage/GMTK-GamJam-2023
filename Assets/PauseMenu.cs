@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
 		else{
 
 			animator.SetTrigger("Close");
-			SlowMotion.LerpSpeedUp(0.5f, this);
+			SlowMotion.LerpSpeedUp(0.1f, this);
 			GameManager.instance.TogglePause(false);
 		}
 		open = !open;

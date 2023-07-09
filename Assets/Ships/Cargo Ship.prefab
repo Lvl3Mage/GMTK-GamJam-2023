@@ -90,8 +90,9 @@ MonoBehaviour:
   forwardAcceleration: 0.99
   sideDrag: 0.1
   rotationSmoothness: 0.6
-  sinkCargoAmount: -2
-  arriveCargoAmount: 10
+  sinkCargoAmount: -3
+  arriveCargoAmount: 7
+  poppupPrefab: {fileID: 898276223418166526, guid: 377ef4ff153830a46a00a01ffe235dce, type: 3}
 --- !u!95 &6164305647120517112
 Animator:
   serializedVersion: 3
