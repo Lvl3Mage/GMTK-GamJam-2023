@@ -13,7 +13,7 @@ public class Monster : MonoBehaviour
 	[SerializeField] GameObject deathEffect;
 	protected Rigidbody2D rigidbody;
 	public bool emerged {get; private set;}
-	void Start()
+	void Awake()
 	{
 		rigidbody = GetComponent<Rigidbody2D>();
 	}
