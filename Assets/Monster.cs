@@ -8,9 +8,10 @@ public class Monster : MonoBehaviour
 	[SerializeField] bool debug;
 	[SerializeField] float lockOnRange;
 	[SerializeField] float acceleration, maxSpeed, maxSpeedDistance;
-	[SerializeField] Tentacle[] tentacles;
-	Rigidbody2D rigidbody;
-	bool emerged = false;
+	[SerializeField] Animator animator;
+	[SerializeField] GameObject deathEffect;
+	protected Rigidbody2D rigidbody;
+	public bool emerged {get; private set;}
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody2D>();
@@ -23,38 +24,45 @@ public class Monster : MonoBehaviour
 		
 		if(closestShip == null){
 			if(emerged){
-				ToggleEmerged(false);
+				emerged = false;
+				ToggleEmerged(emerged);
 			}
-			//hide under the water
 			return;
 		}
-		// appear out of the water
-		if(!emerged){
-			ToggleEmerged(true);
-		}
-		foreach(Tentacle tentacle in tentacles){
-			tentacle.SetTarget(closestShip.transform);
-		}
-		Vector2 delta = closestShip.gameObject.transform.position - transform.position;
 
-		// if(delta.magnitude < attackRange || !attackOnCooldown){
-		// 	//execute attack
-		// 	Ship target = closestShip.gameObject.GetComponentInParent<Ship>();
-		// 	StartCoroutine(Attack(target));
-		// }
-		//move towards ship
+		if(!emerged){
+			emerged = true;
+			ToggleEmerged(emerged);
+		}
+		OnTargetDetected(closestShip.transform);
+
+
+		Vector2 delta = closestShip.gameObject.transform.position - transform.position;
 		rigidbody.velocity = Vector2.Lerp(rigidbody.velocity, Mathf.Min(delta.magnitude/maxSpeedDistance, 1) *maxSpeed * delta.normalized, 1-Mathf.Pow(1-acceleration, Time.deltaTime));
 
 	}
-	void ToggleEmerged(bool toggleVal){
-		emerged = toggleVal;
-		foreach(Tentacle tentacle in tentacles){
-			tentacle.ToggleState(toggleVal);
+	protected virtual void ToggleEmerged(bool toggleVal){}
+	protected virtual void OnTargetDetected(Transform target){}
+	public void Attack(float damage){
+		if(health <= 0){
+			return;	
 		}
+		health -= damage;
+		if(health <= 0){
+			Instantiate(deathEffect, transform.position, transform.rotation);
+			animator.SetTrigger("Death");
+			//Die
+			return;
+		}
+		//Hurt effect?
+
 	}
-	
+	void Die(){
+		MonsterManager.instance.MonsterDestroyed();
+		Destroy(gameObject);
+	}
 	Collider2D[] GetShipsInRange(float range){
-		return Physics2D.OverlapCircleAll(transform.position, range, 1 << 9 /* Current layer index */);
+		return Physics2D.OverlapCircleAll(transform.position, range, 1 << 9 /* Ship layer index */);
 	}
 	Collider2D GetClosest(Collider2D[] cols){
 		float minDistSqr = Mathf.Infinity;
