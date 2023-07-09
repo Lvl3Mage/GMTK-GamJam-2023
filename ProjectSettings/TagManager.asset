@@ -10,6 +10,7 @@ TagManager:
   - Timer
   - Cargo
   - Power
+  - GameOver
   layers:
   - Default
   - TransparentFX

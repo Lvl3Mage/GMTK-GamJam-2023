@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance {get; private set;}
 	[SerializeField] float maxCargo;
 	SliderController cargoSlider;
+	GameOverMenu gameOverMenu;
 	float currentCargo = 0;
 	void Awake()
 	{
@@ -20,6 +21,10 @@ public class GameManager : MonoBehaviour
 	void Start(){
 		cargoSlider = GameObject.FindGameObjectWithTag("Cargo").GetComponent<SliderController>();
 		cargoSlider.SetRange(0,maxCargo);
+		cargoSlider.SetValue(maxCargo-currentCargo);
+
+		gameOverMenu = GameObject.FindGameObjectWithTag("GameOver").GetComponent<GameOverMenu>();
+
 	}
 	public void ChangeCargo(float change){
 		if(gameOver){return;}
@@ -38,7 +43,8 @@ public class GameManager : MonoBehaviour
 		gamePaused = value;
 	}
 	void ShowGameOver(){
-
+		Timer timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
+		gameOverMenu.Open(timer.GetTimePassed());
 	}
 
 	void Update()

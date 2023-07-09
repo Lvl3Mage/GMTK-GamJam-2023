@@ -518,20 +518,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.43956605
+      value: 0.4336098
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.0011479333
+      value: 0.0062974095
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 0.4539149
+      value: 0.44559827
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.12250919
+      value: 0.12890267
       objectReference: {fileID: 0}
+    - target: {fileID: 1592191410521119033, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
+      propertyPath: emergedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ad761535e583f574799ce3a6eeae6d5f, type: 3}
+    - target: {fileID: 1592191410521119033, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
+      propertyPath: submergedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be364cf765b511e408bf1c81ee215d08, type: 3}
+    - target: {fileID: 1592191410521119037, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be364cf765b511e408bf1c81ee215d08, type: 3}
     - target: {fileID: 1592191410521119038, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -668,20 +680,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.43956563
+      value: 0.43360958
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.0011484101
+      value: 0.0062969327
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 0.45391497
+      value: 0.44559827
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 0.12250919
+      value: 0.12890267
       objectReference: {fileID: 0}
+    - target: {fileID: 1592191410521119033, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
+      propertyPath: emergedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ad761535e583f574799ce3a6eeae6d5f, type: 3}
+    - target: {fileID: 1592191410521119033, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
+      propertyPath: submergedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be364cf765b511e408bf1c81ee215d08, type: 3}
+    - target: {fileID: 1592191410521119037, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be364cf765b511e408bf1c81ee215d08, type: 3}
     - target: {fileID: 1592191410521119038, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0
@@ -827,6 +851,10 @@ PrefabInstance:
     - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_Bounds.m_Extent.x
       value: 0.45391485
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592191410521119026, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
+      propertyPath: m_Bounds.m_Extent.y
+      value: 0.12250915
       objectReference: {fileID: 0}
     - target: {fileID: 1592191410521119038, guid: 9763c0436dbbe414589c51fcf8c8a80f, type: 3}
       propertyPath: m_ConnectedAnchor.x
