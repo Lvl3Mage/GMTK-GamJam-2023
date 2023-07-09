@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 152046226048750971}
   - component: {fileID: 152046226048750972}
   - component: {fileID: 5602799328651459911}
+  - component: {fileID: 6164305647120517112}
   m_Layer: 9
   m_Name: Cargo Ship
   m_TagString: Untagged
@@ -91,6 +92,25 @@ MonoBehaviour:
   rotationSmoothness: 0.6
   sinkCargoAmount: -5
   arriveCargoAmount: 10
+--- !u!95 &6164305647120517112
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152046226048750968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27ef0e0ad332d0e479fb325119413976, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &152046227333141304
 GameObject:
   m_ObjectHideFlags: 0

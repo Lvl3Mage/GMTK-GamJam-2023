@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 3191037663245492150}
   - component: {fileID: 6802079350178529283}
   - component: {fileID: 8853717278653588652}
+  - component: {fileID: 5111739668737953419}
   m_Layer: 9
   m_Name: Military Ship
   m_TagString: Untagged
@@ -250,7 +251,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78bad9b3566a06d43951fdeabc0c201a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: df353f8ccaa7dab4ab1ee8af0fcf7376, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -336,6 +337,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &5111739668737953419
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3191037663245492146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03e7898ff9741d042a5d603b4184643a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3191037664510974450
 GameObject:
   m_ObjectHideFlags: 0

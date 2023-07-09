@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+	[SerializeField] PrefabConnection originalPrefab;
 	[SerializeField] float health;
 	[SerializeField] bool debug;
 	[SerializeField] float lockOnRange;
@@ -58,7 +59,7 @@ public class Monster : MonoBehaviour
 
 	}
 	void Die(){
-		MonsterManager.instance.MonsterDestroyed();
+		MonsterManager.instance.MonsterDestroyed(originalPrefab.GetPrefab());
 		Destroy(gameObject);
 	}
 	Collider2D[] GetShipsInRange(float range){

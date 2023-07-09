@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0743ae14640334ca574026e4556bf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalPrefab: {fileID: 11400000, guid: ed003590e561eb840a761a58c271f8d1, type: 2}
   health: 40
   debug: 1
   lockOnRange: 2
