@@ -443,7 +443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6102584365845950010, guid: 5380b341d9487a3419979ee09e8d7216, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5380b341d9487a3419979ee09e8d7216, type: 3}
@@ -483,7 +483,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 500}
+  m_SizeDelta: {x: 1000, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &464014299
 MonoBehaviour:
@@ -580,28 +580,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+  m_text: 'CONTROLS:
 
-    molestiae
-    quas vel sint commodi repudiandae consequuntur voluptatum laborum
+    
 
-    numquam
-    blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+    - LMB to move the currents, RMB to move around,
+    scroll to zoom
 
-    optio,
-    eaque rerum! Provident similique accusantium nemo autem. Veritatis
+    - Bring monsters close to destroy ships
 
-    obcaecati
-    tenetur iure eius earum ut molestias architecto voluptate aliquam
+    - Avoid the
+    military ships
 
-    nihil,
-    eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+    - Don''t let the cargo ships arrive at the ports
 
-    tenetur
-    error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+    - If
+    your disruption level gets reduced to 0, you lose
 
-    quia. Quo
-    neque error repudiandae fuga? Ipsa laudantium molestias eos '
+
+    CREDITS:
+
+    Programming:
+    Lvl3Mage
+
+    Art: Crabbeyyy (Crab)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2bc87d865e9deea45be7970bf22106cb, type: 2}
   m_sharedMaterial: {fileID: -541564813303053868, guid: 2bc87d865e9deea45be7970bf22106cb, type: 2}
@@ -634,7 +636,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 38.45
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
